@@ -1,5 +1,5 @@
 <h1 align="center">
-🔔 vue-pwa-notifications-example
+🔔 vue-notifications-example
 </h1>
 
 fetch data from jsonplaceholder and show Notification
