@@ -1,6 +1,16 @@
 <template>
   <div id="app">
     <b-loading :is-full-page="isFullPage" v-model="isLoading"></b-loading>
+    <b-carousel>
+        <b-carousel-item v-for="(post, i) in posts" :key="i">
+            <section class="hero is-medium">
+                <div class="hero-body has-text-centered">
+                    <h1 class="title">{{post.title}}</h1>
+                    <p>{{post.body}}</p>
+                </div>
+            </section>
+        </b-carousel-item>
+    </b-carousel>
     <button class="button" @click="loadData">loadData</button>
   </div>
 </template>
@@ -47,13 +57,15 @@ export default Vue.extend({
         }
       }
     },
-    async loadData() {
+    loadData() {
       this.isLoading = true
-      const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
-      this.posts = response.data
-      console.log(this.posts)
-      this.isLoading = false
-      this.showNotification()
+      setTimeout(async () => {
+        const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
+        this.posts = response.data
+        console.log(this.posts)
+        this.isLoading = false
+        this.showNotification()
+      }, 1000)
     }
 
   }
