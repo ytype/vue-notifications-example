@@ -1,29 +1,8 @@
-# vue-pwa-notifications-example
+<h1 align="center">
+🔔 vue-pwa-notifications-example
+</h1>
 
-## Project setup
-```
-yarn install
-```
+fetch data from jsonplaceholder and show Notification
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+![](https://user-images.githubusercontent.com/59418226/93679307-5003bb80-fae8-11ea-9d99-15066665e280.PNG)
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

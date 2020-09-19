@@ -1,12 +1,11 @@
 {
-  "name": "vue-pwa-notifications-example",
+  "name": "vue-notifications-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -15,6 +14,7 @@
     "core-js": "^3.6.5",
     "global": "^4.4.0",
     "register-service-worker": "^1.7.1",
+    "vercel": "^20.1.0",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.2",
@@ -60,7 +60,8 @@
         "never"
       ],
       "comma-dangle": [
-        "error", "never"
+        "error",
+        "never"
       ]
     },
     "overrides": [
