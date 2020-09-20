@@ -48,12 +48,14 @@ export default Vue.extend({
       Toast.open('Desktop notifications not available in your browser. Try Chromium!')
     }
     if (Notification.permission !== 'granted') {
+      Toast.open('Notification Permission Denied')
       Notification.requestPermission()
     }
   },
   methods: {
     showNotification() {
       if (Notification.permission !== 'granted') {
+        Toast.open('Notification Permission Denied')
         Notification.requestPermission()
       } else {
         const notification = new Notification('vue-notifications-example', {
@@ -70,12 +72,10 @@ export default Vue.extend({
       setTimeout(async () => {
         const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
         this.posts = response.data.slice(0, 10)
-        console.log(this.posts)
         this.isLoading = false
         this.showNotification()
       }, 2000)
     }
-
   }
 })
 </script>
